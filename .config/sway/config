@@ -21,7 +21,7 @@ set $lock_script ~/.config/sway/lock.sh
 set $bar_font pango:0xProto Nerd Font 16
 
 # swaybar status script
-set $status_script ~/.config/sway/status.sh
+set $status_script ~/bin/status.sh
 
 # wallpaper paths
 set $default_wallpaper /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
@@ -211,6 +211,7 @@ bindsym Print exec grim
 
 ### swaybar
 bar {
+    id swaybar
     position top
     status_command while $status_script; do sleep 1; done
 
@@ -242,7 +243,9 @@ for_window [class="zoom"] floating enable
 exec --no-startup-id zapzap
 exec --no-startup-id insync start
 exec --no-startup-id vesktop --start-minimized
-
+#swaybar display selection
+exec_always ~/bin/swaybar-wrapper.sh
 ### include additional configs
 include /etc/sway/config.d/*
+
 
