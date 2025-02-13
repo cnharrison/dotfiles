@@ -1,0 +1,251 @@
+### variables
+# mod key
+set $mod Mod4
+
+# directional keys
+set $left h
+set $down j
+set $up k
+set $right l
+
+# terminal
+set $term ghostty
+
+# launcher
+set $menu fuzzel
+
+# lock screen script
+set $lock_script ~/.config/sway/lock.sh
+
+# swaybar font
+set $bar_font pango:0xProto Nerd Font 16
+
+# swaybar status script
+set $status_script ~/bin/status.sh
+
+# wallpaper paths
+set $default_wallpaper /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
+set $dp4_wallpaper /home/christopher/Insync/cnharrison@gmail.com/Google\ Drive/wallpapers/4k/great-wave-off-kanagawa-background-photo-upscaled.jpg
+set $edp1_wallpaper /home/christopher/Insync/cnharrison@gmail.com/Google\ Drive/wallpapers/4k/wallhaven-96l1ow.jpg
+
+### outputs
+# default background
+output * bg $default_wallpaper fill
+
+# external monitor
+output DP-4 resolution 3840x2160 position 0 0 bg $dp4_wallpaper fill
+
+# laptop screen
+output eDP-1 resolution 1920x1080 position 960 2160 bg $edp1_wallpaper fill
+
+### idle behavior
+# lock screen and dpms off after timeout
+exec swayidle \
+    timeout 1800 '$lock_script' \
+    timeout 3600 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep '$lock_script'
+
+### inputs
+# touchpad settings
+input "1267:41:Elan_Touchpad" {
+  dwt enabled
+  tap enabled
+  middle_emulation enabled
+}
+
+### key bindings
+# launch terminal
+bindsym $mod+Return exec $term
+
+# close focused window
+bindsym $mod+Shift+q kill
+
+# open launcher
+bindsym $mod+d exec $menu
+
+# reload sway config
+bindsym $mod+Shift+c reload
+
+# exit sway with confirmation
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+# focus movement
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move windows
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# lock screen
+bindsym $mod+Backspace exec notify-send -i gnome-lockscreen "Locking screen..." && $lock_script
+
+# screenshot
+bindsym $mod+Shift+s exec ~/bin/grimshot-fuzzel
+
+### window appearance
+# borders
+default_border pixel 6px
+default_floating_border none
+
+# client colors
+client.focused #7E9CD8 #7E9CD8 #7E9CD8 #7E9CD8
+client.unfocused #54546D #54546D #54546D #54546D
+
+### gaps
+gaps inner 10
+gaps outer 10
+
+### workspaces
+# assign workspaces to outputs
+workspace 1 output eDP-1
+workspace 2 output DP-4
+workspace 3 output DP-4
+workspace 4 output DP-4
+workspace 5 output DP-4
+workspace 6 output DP-4
+workspace 7 output DP-4
+workspace 8 output DP-4
+workspace 9 output DP-4
+workspace 10 output DP-4
+
+# start on workspace 2
+exec swaymsg workspace 2
+
+# workspace switching
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+
+# move windows to workspaces
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+
+### layout management
+# split layouts
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+# stacking, tabbed, toggle split
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# fullscreen
+bindsym $mod+f fullscreen
+
+# toggle floating
+bindsym $mod+Shift+space floating toggle
+
+# focus mode toggle
+bindsym $mod+space focus mode_toggle
+
+# focus parent
+bindsym $mod+a focus parent
+
+### scratchpad
+# move to scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# show scratchpad
+bindsym $mod+minus scratchpad show
+
+### resize mode
+mode "resize" {
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# enter resize mode
+bindsym $mod+r mode "resize"
+
+### media keys
+# audio and brightness controls
+bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
+bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym Print exec grim
+
+### swaybar
+bar {
+    id swaybar
+    position top
+    status_command while $status_script; do sleep 1; done
+
+    colors {
+        separator #54546D
+        background #1F1F28
+        statusline #DCD7BA
+
+        # focused workspace
+        focused_workspace #DCD7BA #1F1F28 #DCD7BA
+
+        # active workspace
+        active_workspace #C8C093 #1F1F28 #C8C093
+
+        # inactive workspace
+        inactive_workspace #727169 #1F1F28 #727169
+
+        # urgent workspace
+        urgent_workspace #FF5D62 #1F1F28 #FF5D62
+    }
+    font $bar_font
+}
+
+### window rules
+# zoom always floating
+for_window [class="zoom"] floating enable
+
+### autostart applications
+exec --no-startup-id zapzap
+exec --no-startup-id insync start
+exec --no-startup-id vesktop --start-minimized
+#swaybar display selection
+exec_always ~/bin/swaybar-wrapper.sh
+### include additional configs
+include /etc/sway/config.d/*
+
+
