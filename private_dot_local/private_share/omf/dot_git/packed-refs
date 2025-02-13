@@ -1,0 +1,13 @@
+# pack-refs with: peeled fully-peeled sorted 
+c20ff54a7572a1b9fdfb8b09011d3814d7dee339 refs/remotes/origin/doctor-db
+5238019fc3371301ed7172051f5fce4ed3130569 refs/remotes/origin/fix-confd
+ce2fa982906a5119a429b00b9c7c06036e62220b refs/remotes/origin/master
+70a32d5a59308fc5647e6739e126912b6ca39024 refs/remotes/origin/omf-install-tests
+350e857ac9b065e82d50126a2358b1e476cc5831 refs/remotes/origin/update-ci
+15e9af84b14a3e0a6a7f703a694a6b52a48198ad refs/tags/v2
+ec2b34a2580caf51fa441370b7aee2fbdffe8a37 refs/tags/v3
+016ea34a9b6da57aa7a01df71327ea4d26b2e168 refs/tags/v4
+922902a99da6e45b0c894078f7a78eba5a04511a refs/tags/v5
+1069f1fac2003a532b7a2920886589e600adaf20 refs/tags/v6
+c814d44913359bcb78b56f381ab5e7ca9ef75350 refs/tags/v7
+^92a572d8cdfdf5b219269d59210b8a28f6cd6616
