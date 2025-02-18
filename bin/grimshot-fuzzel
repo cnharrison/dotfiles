@@ -1,0 +1,20 @@
+#!/bin/bash
+
+options="Area\nWindow\nOutput"
+
+choice=$(echo -e "$options" | fuzzel --prompt "Select target:" --dmenu)
+
+case "$choice" in
+Area)
+  grimshot copy area
+  ;;
+Window)
+  grimshot copy window
+  ;;
+Output)
+  grimshot copy output
+  ;;
+*)
+  echo "Invalid choice or canceled."
+  ;;
+esac
