@@ -1,0 +1,36 @@
+[theme]
+main_fg = #DCD7BA
+main_bg = #1F1F28
+title = #7E9CD8
+hi_fg = #E6C384
+hi_bg = #2D4F67
+frame = #54546D
+
+cpu_box = #957FB8
+cpu_core = #7FB4CA
+cpu_meter = #E46876
+
+mem_box = #76946A
+mem_meter = #DCA561
+
+proc_box = #C34043
+proc_meter = #FF5D62
+proc_tree = #7AA89F
+
+net_box = #658594
+net_meter = #FFA066
+net_rx = #98BB6C
+net_tx = #D27E99
+
+disk_box = #C8C093
+disk_meter = #E6C384
+
+temp_start = #7FB4CA
+temp_mid = #FF9E3B
+temp_end = #E82424
+
+graph_text = #DCD7BA
+graph_start = #7AA89F
+graph_mid = #DCA561
+graph_end = #E46876
+
