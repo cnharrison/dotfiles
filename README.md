@@ -3,7 +3,7 @@
 This is a super minimal waybar-free sway setup using the Kanagawa colorscheme. There are many like it but this one is mine
 
 ### Uses
-- Sway, ghostty, fish, neovim, zellij, mako, waybar
+- Sway, ghostty, fish, neovim, zellij, mako, waybar, Kuro
 
 ### Features
 - Everything themed with [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
@@ -18,7 +18,7 @@ This is a super minimal waybar-free sway setup using the Kanagawa colorscheme. T
 2. Install:
 ```bash
 # On Arch-based systems
-paru -S sway ghostty fish neovim zellij bat eza fzf mako
+paru -S sway ghostty fish neovim zellij bat eza fzf mako kuro
 ```
 
 3. Copy configs:
