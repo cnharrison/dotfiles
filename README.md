@@ -1,6 +1,6 @@
 # 🌊 Christopher's Kanagawa dotfiles
 
-This is a super minimal waybar-free sway setup using the Kanagawa colorscheme. There are many like it but this one is mine
+This is a super minimal waybar-free sway setup for getting work done with a minimal footprint using the Kanagawa colorscheme. There are many like it but this one is mine
 
 ### Uses
 - Sway, fuzzel, ghostty, fish, neovim, zellij, mako, Kuro
