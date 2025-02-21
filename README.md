@@ -51,6 +51,7 @@ chsh -s $(which fish)
 
 - Wayland
 - You'll want to edit the wallpaper font, and monitor path vars in `.config/sway/config` as well as the outputs in `bin/swaybar-wrapper.sh`
+- Update your city for the weather readout in `bin/status.sh`
 
 ## Screenshot
 ![terminal screenshot](https://i.imgur.com/7dENbEl.png)
