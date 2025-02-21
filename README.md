@@ -8,7 +8,7 @@ This is a super minimal waybar-free sway setup using the Kanagawa colorscheme. T
 ### Features
 - Everything themed with [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
 - Smart [swaybar](https://man.archlinux.org/man/sway-bar.5) with weather and system info
-- Kanagawa-themed version of emoji-powerline `fish` prompt
+- Kanagawa-themed version of emoji-powerline [fish](https://github.com/fish-shell/fish-shell) prompt
 - [LazyVim](https://www.lazyvim.org/) with Kanagawa theme 
 - Kanagawa theme for [Kuro](https://github.com/davidsmorais/kuro)
 - Modern CLI tools ([bat](https://github.com/sharkdp/bat), [eza](https://github.com/eza-community/eza), [fzf](https://github.com/junegunn/fzf))
