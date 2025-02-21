@@ -9,6 +9,7 @@ This is a super minimal waybar-free sway setup using the Kanagawa colorscheme. T
 - Everything themed with [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
 - Smart swaybar with weather and system info
 - Kanagawa-themed version of emoji-powerline `fish` prompt
+- Kanagawa theme for [Kuro](https://github.com/davidsmorais/kuro)
 - Modern CLI tools (`bat`, `eza`, `fzf`)
 
 ## Quick start
@@ -58,5 +59,4 @@ chsh -s $(which fish)
  ![great wave of kanagawa with gradient background](https://i.imgur.com/bWp4T9p.jpeg)
 
 ## Todo
-- [ ] Modularize the color scheme + allow switching with a script
-- [ ] Modularize the display outputs + allow switching with a script# dotfiles
+- [ ] Modularize the color scheme + display outputs and allow switching with a script
