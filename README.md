@@ -11,7 +11,7 @@ This is a super minimal waybar-free sway setup using the Kanagawa colorscheme. T
 - Kanagawa-themed version of emoji-powerline `fish` prompt
 - [LazyVim](https://www.lazyvim.org/) with Kanagawa theme 
 - Kanagawa theme for [Kuro](https://github.com/davidsmorais/kuro)
-- Modern CLI tools (`bat`, `eza`, `fzf`)
+- Modern CLI tools ([bat](https://github.com/sharkdp/bat), [eza](https://github.com/eza-community/eza), [fzf](https://github.com/junegunn/fzf)
 
 ## Quick start
 
