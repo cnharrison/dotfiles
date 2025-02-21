@@ -1,8 +1,0 @@
-[plugin]
-prepend_previewers = [
-    { mime = "image/*", run = "magick convert ${path} png:-" }
-]
-
-[image]
-run = "magick convert ${path} png:- | chafa --format sixel --size ${width}x${height}"
-
