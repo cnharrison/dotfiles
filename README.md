@@ -6,7 +6,7 @@ This is a super minimal waybar-free sway setup using the Kanagawa colorscheme. T
 - Sway, fuzzel, ghostty, fish, neovim, zellij, mako, Kuro
 
 ### Features
-- [fuzzel](https://codeberg.org/dnkl/fuzzel), [mako](https://github.com/emersion/mako), [Ghostty](https://github.com/ghostty-org) and [zellij](https://github.com/zellij-org/zellij) and [bat](https://github.com/sharkdp/bat) themed with [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
+- [fuzzel](https://codeberg.org/dnkl/fuzzel), [mako](https://github.com/emersion/mako), [Ghostty](https://github.com/ghostty-org) [zellij](https://github.com/zellij-org/zellij) and [bat](https://github.com/sharkdp/bat) themed with [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
 - Smart [swaybar](https://man.archlinux.org/man/sway-bar.5) with weather and system info
 - Kanagawa-themed version of [emoji-powerline](https://github.com/wyqydsyq/emoji-powerline) [fish](https://github.com/fish-shell/fish-shell) prompt
 - [LazyVim](https://www.lazyvim.org/) with Kanagawa theme 
