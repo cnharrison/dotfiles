@@ -3,7 +3,7 @@
 This is a super minimal waybar-free sway setup for getting work done with a minimal footprint using the Kanagawa colorscheme. There are many like it but this one is mine
 
 ### Uses
-- Sway, fuzzel, ghostty, fish, neovim, zellij, mako, Kuro
+- Sway, fuzzel, Ghostty, fish, neovim, zellij, mako, Kuro
 
 ### Features
 - [fuzzel](https://codeberg.org/dnkl/fuzzel), [mako](https://github.com/emersion/mako), [Ghostty](https://github.com/ghostty-org) [zellij](https://github.com/zellij-org/zellij) and [bat](https://github.com/sharkdp/bat) themed with [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
